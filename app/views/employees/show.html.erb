@@ -1,0 +1,14 @@
+<h1>About <%= "#{@employee.first_name} #{@employee.last_name}" %></h1>
+<%= image_tag("#{@employee.img_url}") %>
+<h2>AKA:<%= @employee.alias %></h2>
+<h2><%= @employee.title %></h2><br>
+<br>
+<br>
+<h3>Works in: <%= @employee.office %></h3>
+<p>Pets: <%= link_to @dog.name, @dog %></p><br>
+<br>
+<br>
+<h5><%= link_to "Edit #{@employee.first_name}'s Information", edit_employee_path(@employee) %></h5><br>
+<br>
+<br>
+<footer><%= link_to "Employee Home", employees_path %> || <%= link_to "Pet Home", dogs_path %></footer>
