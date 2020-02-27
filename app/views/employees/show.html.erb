@@ -1,0 +1,11 @@
+<h1><%=@employee.first_name%> <%=@employee.last_name%></h1>
+<fieldset>
+<legend><font size='5'>Fun Facts</font></legend>
+<p><b><font size='4'>Alias:</font></b> <%=@employee.alias%></P
+<p><b><font size='4'>Title:</font></b> <%=@employee.title%></p>
+<p><b><font size='4'>Office:</font></b> <%=@employee.office%></p>
+<p><b><font size='4'>Dog:</font></b> <%=@employee.dog.name%></p>
+<p><b><font size='4'>Image!</font></b> <%=link_to "Check it out!", @employee.img_url%></p>
+
+<br><br>
+<%=link_to "Edit", edit_employee_path%>

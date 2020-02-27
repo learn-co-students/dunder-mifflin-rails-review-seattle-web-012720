@@ -1,0 +1,11 @@
+<h1>All the Employees</h1>
+
+Search by Dog
+<%= form_tag(employees_path, method: "get") do %>
+  <%=text_field_tag(:search, params[:search]) %>
+  <%= submit_tag("Search")%>
+  <%end%>
+
+<% @employees.each do |employee| %>
+    <h3><%=link_to "#{employee.first_name} #{employee.last_name}", employee_path(employee)%></h3>
+    <% end %>

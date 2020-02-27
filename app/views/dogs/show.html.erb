@@ -1,0 +1,12 @@
+<h1><%=@dog.name%></h1>
+<fieldset>
+<!-- <legend>Traits</legend> -->
+<p><b><font size='4'>Breed:</b></font> <%=@dog.breed.upcase%></p>
+<p><b><font size='4'>Age:</b></font> <%=@dog.age%></p>
+<p><b><font size='4'>Associated Employees:</b></font>
+
+<ul>
+<% @dog.employees.each do |dude| %>
+    <li><%= link_to "#{dude.first_name} #{dude.last_name}", employee_path(dude) %></li>
+    <% end %>
+
