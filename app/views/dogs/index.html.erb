@@ -2,7 +2,7 @@
 
 <%=form_tag(dogs_path, method: "get") do %>
     <%= hidden_field_tag(:sort, params[:sort]=true) %>
-    <%= submit_tag("Sort by Number of Employees") %>
+    <%= submit_tag("Sort by Name Alphabetically") %>
     <% end %>
 
 <% @dogs.each do |dog| %>
