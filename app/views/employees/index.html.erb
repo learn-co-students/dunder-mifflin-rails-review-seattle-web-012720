@@ -1,0 +1,21 @@
+
+<h1>See all employee atributes and the dogs they take care off.</h1>
+
+<% @employees.each do |obj_d|%>
+
+    <h1><%=link_to obj_d.first_name, employee_path(obj_d)%></h1>
+     <h1><%=obj_d.last_name%></h1>
+    
+    <%end%>
+    
+    <h1>Edit a employee with their dog</h1>
+    <% @employees.each do |obj_d|%>
+
+        <h1><%=link_to obj_d.first_name, edit_employee_path(obj_d)%></h1>
+         <h1><%=obj_d.last_name%></h1>
+        
+        <%end%>
+
+    <h1>Create a employee with their dog</h1>
+        
+    <%=link_to @name, new_employee_path%>

@@ -1,0 +1,10 @@
+<h1><%=@dog.name%></h1>
+<h1><%=@dog.breed%></h1>
+<h1><%=@dog.age%></h1>
+<% list = Employee.all.select do |obj_e|%>
+<% obj_e.dog_id == @dog.id %>
+<%end%>
+
+<% list.each do |obj_e| %>
+    <%= obj_e.first_name %>
+    <% end %>

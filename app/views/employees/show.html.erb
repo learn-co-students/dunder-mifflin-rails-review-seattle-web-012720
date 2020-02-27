@@ -1,0 +1,17 @@
+
+
+   <h1> The Image Element<%=@employee.first_name %> <%=@employee.last_name %> </h1>
+   <img src=<%=@employee.img_url%> alt="Hi" >
+    <h1> <%=@employee.alias %> </h1>
+    <h1> <%=@employee.title %> </h1>
+    <h1>  <%=@employee.office %> </h1>
+    <%@sip = Dog.all.select do |obj| %>
+        <%obj.id == @employee.dog_id%>
+        <%end%>
+        
+        <h1> <%=@sip.map do |nam|%> </h1>
+             <%nam.name%> 
+            <%end[0]%>
+       
+
+   
