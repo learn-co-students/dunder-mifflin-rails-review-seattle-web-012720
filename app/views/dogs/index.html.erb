@@ -1,0 +1,9 @@
+    <ol>
+    <% @dogs.each do |dog| %>
+        <li><%= link_to dog.name, dog %></li>
+        <ul>
+            <li>Breed: <%= dog.breed %></li>
+            <li>Age: <%= dog.age %></li>
+        </ul>
+    <% end %>
+    </ol>

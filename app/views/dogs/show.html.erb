@@ -1,0 +1,11 @@
+
+
+<h2><%= @dog.name %></h2>
+<ul>
+    <li>Breed: <%= @dog.breed %></li>
+    <li>Age: <%= @dog.age %></li>
+</ul>
+
+<%= link_to "Edit", edit_dog_path(@dog)%>
+<%= link_to "Delete", @dog, method: "delete", data: { confirm: 'Are you sure?' }%>
+
