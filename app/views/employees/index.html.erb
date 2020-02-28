@@ -1,0 +1,11 @@
+    <ol>
+    <% @employees.each do |employee| %>
+        <li><%= link_to employee.first_name + " " + employee.last_name, employee %></li>
+        <ul>
+            <li>Title: <%= employee.title %></li>
+            <li>Alias: <%= employee.alias %></li>
+            <li>Office: <%= employee.office %></li>
+            <li>Dog: <%= employee.dog.name %></li><br>
+        </ul>
+    <% end %>
+    </ol>

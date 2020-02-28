@@ -1,0 +1,13 @@
+
+
+<h2><%= @employee.first_name + " " + @employee.last_name %></h2>
+<ul>
+    <li>Title: <%= @employee.title %></li>
+    <li>Alias: <%= @employee.alias %></li>
+    <li>Office: <%= @employee.office %></li>
+    <li>Dog: <%= @employee.dog.name %></li><br>
+</ul>
+
+<%= link_to "Edit", edit_employee_path(@employee)%>
+<%= link_to "Delete", @employee, method: "delete", data: { confirm: 'Are you sure?' }%>
+
